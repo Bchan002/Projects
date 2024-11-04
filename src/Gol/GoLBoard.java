@@ -38,6 +38,7 @@ public class GoLBoard {
             }
         }
 
+        //Check if there is still any empty char, update with dead
         for (int r = 0; r < board.length; r++) {
             for (int c = 0; c < board[0].length; c++) {
                 if (board[r][c] == ' ') {
