@@ -34,7 +34,7 @@ public class FeedBackBoard {
             for(int j=0; j<codeBreaker.length; j++){
                 if(codeBreaker[j] == codeMaker[i] && i==j){
                     colorsList.add("red");
-                } else if(codeBreaker[j]==codeMaker[j] && i!=j){
+                } else if(codeBreaker[j]==codeMaker[i] && i!=j){
                     colorsList.add("white");
                 }
             }
@@ -65,6 +65,29 @@ public class FeedBackBoard {
             }
             System.out.println();
         }
+    }
+
+    public void checkBoard(){
+
+        Boolean hasWon = false;
+
+        for (int i = 0; i < colorTag.length; i++) {
+            for (int j = 0; j < colorTag[0].length; j++) {
+                if(colorTag[i][j].equals("red")){
+                    hasWon = true;
+                    break;
+                } else{
+                    hasWon = false;
+                }
+            }
+        }
+
+        if(hasWon){
+            System.out.println("Ypu have won!");
+        } else{
+            System.out.println("Please try again");
+        }
+        
     }
 
      
